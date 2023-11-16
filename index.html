@@ -99,50 +99,74 @@
       cursor: pointer;
     }
   </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-  <h1>Blockchain Style Index</h1>
+  <h1 class="display-4">Blockchain Style Index</h1>
 
-  <p>
+  <p class="lead">
     This is an example of a website with a blockchain-inspired style. The background is black, and the text is white. The blocks are used to represent the blocks in a blockchain.
   </p>
 
-  <div class="blockchain-blocks">
-    <div class="blockchain-block">
-      <div class="blockchain-block-header">Block 1</div>
-      <div class="blockchain-block-body">This is the first block in the blockchain.</div>
-    </div>
-    <div class="blockchain-block">
-      <div class="blockchain-block-header">Block 2</div>
-      <div class="blockchain-block-body">This is the second block in the blockchain.</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">Block 1</div>
+          <div class="card-body">This is the first block in the blockchain.</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">Block 2</div>
+          <div class="card-body">This is the second block in the blockchain.</div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <nav class="menu">
-    <a href="#" class="menu-item">Home</a>
-    <a href="#" class="menu-item">Videos</a>
-    <a href="#" class="menu-item">About</a>
-
-    <div class="menu-item dropdown">
-      <a href="#" class="menu-item">Login</a>
-      <div class="dropdown-content">
-        <a href="#">Username</a>
-        <a href="#">Password</a>
-        <a href="#">Logout</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Blockchain Style Index</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Videos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
 
-  <div class="video-container">
-    <div class="video-item">
-      <img src="video1.jpg" alt="Video 1">
-      <h2 class="video-title">Video 1</h2>
-      <p class="video-description">This is the description for video 1.</p>
-    </div>
-    <div class="video-item">
-      <img src="video2.jpg" alt="Video 2">
-      <h2 class="video-title">Video 2</h2>
-      <p class="video-description">This is the description for video 2.</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <img src="video1.jpg" class="card-img-top" alt="Video 1">
+          <div class="card-body">
+            <h5 class="card-title">Video 1</h5>
+            <p class="card-text">This is the description for video 1.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <img src="video2.jpg" class="card-img-top" alt="Video 2">
+          <div class="card-body">
+            <h5 class="card-title">Video 2</h5>
+            <p class="card-text">This is the description for video 2.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>
