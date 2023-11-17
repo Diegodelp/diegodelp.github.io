@@ -150,7 +150,13 @@
       <div class="hex"><a class="heximg" href="roadmap.html"><div class="hex-text">Roadmap</div><img class="heximg" src="empty.webp" alt="some"></a></div>
       <div class="hex"><a class="heximg" href="default.asp"><div class="hex-text"></div><img class="heximg" src="empty.webp" alt="some"></a></div>
       <div class="hex"><a class="heximg" href="default.asp"><div class="hex-text">Contact Us</div><img class="heximg" src="empty.webp" alt="some"></a></div>
-      <div id="loginDiv" class="hex"><a class="heximg"><button onclick="closeDiv()" style="position: absolute;background: none;top: 23%;left: 91%;border: none;">X</button><div class="hex-text">Login/Register</div><img class="heximg" src="7.png"></a></div>
+      <div id="loginDiv" class="hex">
+	      <a class="heximg">
+		      <button onclick="closeDiv()" style="position: absolute;background: none;top: 23%;left: 91%;border: none;">X</button>
+		      <div class="hex-text"><form><input type="text"><input type="password"></form></div>
+		      <img class="heximg" src="7.png">
+	      </a>
+      </div>
     </section>
   
  
@@ -176,7 +182,7 @@
         var height = window.innerHeight;
         loginDiv.style.display = "block";
         loginDiv.style.position = "absolute"
-        loginDiv.style.scale = "140%";
+        loginDiv.style.scale = "240%";
         //calculamos la posición del div
         var top = height / 2 - loginDiv.clientHeight / 2;
         var left = width / 2 - loginDiv.clientWidth / 2;
