@@ -109,7 +109,7 @@
         }
 	.hex:nth-child(13) {
 	  display: none;
-	  position: absolute;
+	  position: relative;
 
         }	
         .hex-text {
@@ -176,19 +176,9 @@
 	  loginDiv.style.top = "50%";
 	  loginDiv.style.left = "50%";
 	
-	  loginDiv.animate({
-	    width: "300px",
-	    height: "200px",
-	    top: "25%",
-	    left: "35%",
-	  });
-	
-	  //escuchamos el evento animationend para que el div no se cierre
-	  loginDiv.addEventListener("animationend", function() {
-	    loginDiv.style.display = "block";
-	  });
+	  //establecemos la propiedad display del otro div a block
+	  document.getElementById("registerDiv").style.display = "block";
 	}
-	    
 	</script>
 </body>
 </html>
