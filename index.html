@@ -186,5 +186,18 @@
 	  document.getElementById("loginDiv").style.display = "block";
 	}
 	</script>
+	<script>
+	    document.addEventListener("click", function(event) {
+	    //obtenemos el elemento que se ha hecho clic
+	    var target = event.target;
+	
+	    //si el elemento que se ha hecho clic no es el div
+	    if (target !== loginDiv) {
+	
+	      //cerramos el div
+	      document.getElementById("loginDiv").style.display = "none";
+	    }
+	  });
+	</script>
 </body>
 </html>
