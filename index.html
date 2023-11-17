@@ -169,7 +169,6 @@
     <script>
 	function showDiv() {
 	  var loginDiv = document.getElementById("loginDiv");
-	  var target = event.target;
 	 //obtenemos el ancho y la altura de la ventana del navegador
 	  var width = window.innerWidth;
 	  var height = window.innerHeight;
@@ -185,8 +184,17 @@
 	  loginDiv.style.left = left + "px";
 	  //establecemos la propiedad display del otro div a block
 	  document.getElementById("loginDiv").style.display = "block";
-	  
-	}
+	  document.addEventListener("click", function(event) {
+	    //obtenemos el elemento que se ha hecho clic
+	    var target = event.target;
+	
+	    //si el elemento que se ha hecho clic no es el div
+	    if (target !== loginDiv) {
+	
+	      //cerramos el div
+	      loginDiv.style.display = "none";
+	    }
+	  });
 	</script>
 </body>
 </html>
