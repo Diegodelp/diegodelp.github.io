@@ -183,6 +183,11 @@
 	    top: "25%",
 	    left: "35%",
 	  }, 500);
+	
+	  //escuchamos el evento animationend para que el div no se cierre
+	  loginDiv.addEventListener("animationend", function() {
+	    loginDiv.style.display = "block";
+	  });
 	}
 	    
 	</script>
