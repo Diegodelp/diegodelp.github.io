@@ -183,13 +183,12 @@
         //establecemos la posición del div
         loginDiv.style.top = top + "px";
         loginDiv.style.left = left + "px";
-
-        //añadimos un listener para el evento click al div
-        document.addEventListener("click", function(event) {
-        if (event.target !== loginDiv) {
-        loginDiv.style.display = "none";
-      	}
-    	});
+	      
+        loginDiv.addEventListener("click", function(event) {
+          if (event.target !== document.getElementById("loginDiv")) {
+            document.getElementById("loginDiv").style.display = "none";
+          }
+        });
       }
     }
   </script>
