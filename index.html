@@ -171,10 +171,21 @@
 	  var loginDiv = document.getElementById("loginDiv");
 	
 	  loginDiv.style.display = "block";
+	  loginDiv.style.position = "absolute"
 	  loginDiv.style.width = "480";
 	  loginDiv.style.height = "530";
-	  loginDiv.style.top = "50%";
-	  loginDiv.style.left = "50%";
+	 
+	  //obtenemos el ancho y la altura de la ventana del navegador
+	  var width = window.innerWidth;
+	  var height = window.innerHeight;
+	
+	  //calculamos la posición del div
+	  var top = height / 2 - loginDiv.clientHeight / 2;
+	  var left = width / 2 - loginDiv.clientWidth / 2;
+	
+	  //establecemos la posición del div
+	  loginDiv.style.top = top + "px";
+	  loginDiv.style.left = left + "px";
 	
 	  //establecemos la propiedad display del otro div a block
 	  document.getElementById("loginDiv").style.display = "block";
