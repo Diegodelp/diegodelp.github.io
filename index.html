@@ -183,7 +183,8 @@
 	    //establecemos la posición del div
 	    loginDiv.style.top = top + "px";
 	    loginDiv.style.left = left + "px";
-	
+	    //establecemos la propiedad display del otro div a block
+	    document.getElementById("loginDiv").style.display = "block";
 	    //añadimos un listener para el evento click al documento
 	    document.addEventListener("click", function(event) {
 	      if (event.target !== loginDiv) {
