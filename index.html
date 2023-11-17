@@ -185,7 +185,7 @@
         loginDiv.style.left = left + "px";
 	      
         loginDiv.addEventListener("click", function(event) {
-         if (event.target.closest("loginDiv") === null) {
+         if (event.target.closest("loginDiv") !== null) {
         	loginDiv.style.display = "none";
       	}
         });
