@@ -153,7 +153,7 @@
       <div class="hex"><a class="heximg" href="default.asp"><div class="hex-text"></div><img class="heximg" src="empty.webp"></a></div>
       <div class="hex"><a class="heximg" href="presale.asp"><div class="hex-text">Pre-sale Token</div><img class="heximg" src="5.png" alt="some"></a></div>
       <div class="hex"><a class="heximg" href="default.asp"><div class="hex-text"></div><img class="heximg" src="6.png" alt="some"></a></div>
-      <div class="hex-hidden"><a class="heximg" href="login.html"><div class="hex-text">Login/Register</div><img class="heximg" src="7.png" alt="some"></a></div>
+      <div id="loginh" class="hex-hidden"><a class="heximg" href="login.html"><div class="hex-text">Login/Register</div><img class="heximg" src="7.png" alt="some"></a></div>
       <div class="hex"><a class="heximg" onclick="showDiv()"><div class="hex-text">Login/Register</div><img class="heximg" src="7.png" onclick="showDiv() alt="some"></a></div>
       <div class="hex"><a class="heximg" href="tecnology.html"><div class="hex-text">Technology</div><img class="heximg" src="empty.webp" alt="some"></a></div>
       <div class="hex"><a class="heximg" href="default.asp"><div class="hex-text"></div><img class="heximg" src="empty.webp" alt="some"></a></div>
@@ -179,15 +179,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
 	function showDiv() {
-	  var myDiv = document.getElementById("myDiv");
+	  var myDiv = document.getElementById("loginh");
 	
-	  myDiv.style.display = "block";
-	  myDiv.style.width = "0";
-	  myDiv.style.height = "0";
-	  myDiv.style.top = "50%";
-	  myDiv.style.left = "50%";
+	  loginh.style.display = "block";
+	  loginh.style.width = "0";
+	  loginh.style.height = "0";
+	  loginh.style.top = "50%";
+	  loginh.style.left = "50%";
 	
-	  myDiv.animate({
+	  loginh.animate({
 	    width: "100%",
 	    height: "100%",
 	    top: "0",
