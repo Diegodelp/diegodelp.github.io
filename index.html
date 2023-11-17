@@ -185,11 +185,11 @@
         loginDiv.style.left = left + "px";
 
         //añadimos un listener para el evento click al div
-        loginDiv.addEventListener("click", function(event) {
-          if (event.target != loginDiv) {
-            loginDiv.style.display = "none";
-          }
-        });
+        document.addEventListener("click", function(event) {
+        if (event.target !== loginDiv) {
+        loginDiv.style.display = "none";
+      	}
+    	});
       }
     }
   </script>
