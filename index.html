@@ -169,6 +169,7 @@
     <script>
 	function showDiv() {
 	  var loginDiv = document.getElementById("loginDiv");
+	  var target = event.target;
 	
 	  loginDiv.style.display = "block";
 	  loginDiv.style.position = "absolute"
@@ -189,11 +190,11 @@
 	
 	  //establecemos la propiedad display del otro div a block
 	  document.getElementById("loginDiv").style.display = "block";
-	  if (target !== loginDiv) {
-	
-	  //cerramos el div
-	  document.getElementById("loginDiv").style.display = "none";
-    	  }
+	  document.addEventListener("click", function(event) {
+	    if (target !== loginDiv && !target.parentNode.contains(loginDiv)) {
+	      loginDiv.style.display = "none";
+	    }
+	  });
 	}
 	</script>
 </body>
