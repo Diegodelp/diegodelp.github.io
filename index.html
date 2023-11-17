@@ -185,9 +185,9 @@
         loginDiv.style.left = left + "px";
 	      
         loginDiv.addEventListener("click", function(event) {
-          if (event.target !== document.getElementById("loginDiv")) {
-            document.getElementById("loginDiv").style.display = "none";
-          }
+         if (event.target.closest("loginDiv") === null) {
+        	loginDiv.style.display = "none";
+      	}
         });
       }
     }
