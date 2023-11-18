@@ -121,6 +121,7 @@
 	  position: relative;
 	  width: 480;
 	  height: 530;
+	  transition: transform 0.1s
         }	
         .hex-text {
             position: absolute;
@@ -200,7 +201,7 @@
         var height = window.innerHeight;
         loginDiv.style.display = "block";
         loginDiv.style.position = "absolute"
-	loginDiv.style.transform = "scale(2,2)"
+	loginDiv.style.transform = "scale(1,1)"
 
         //calculamos la posición del div
         var top = height / 2 - loginDiv.clientHeight / 2;
