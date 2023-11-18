@@ -36,6 +36,15 @@
           padding-bottom: 50px;
           margin-bottom: 100px;
         }
+	.hex-hide {
+          display: flex;
+          position: relative;
+          width: 480px;
+          height: 530px;
+          background-color: #424242;
+          -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
         .hex {
           display: flex;
           position: relative;
@@ -150,7 +159,7 @@
       <div class="hex"><a class="heximg" href="roadmap.html"><div class="hex-text">Roadmap</div><img class="heximg" src="empty.webp" alt="some"></a></div>
       <div class="hex"><a class="heximg" href="default.asp"><div class="hex-text"></div><img class="heximg" src="empty.webp" alt="some"></a></div>
       <div class="hex"><a class="heximg" href="default.asp"><div class="hex-text">Contact Us</div><img class="heximg" src="empty.webp" alt="some"></a></div>
-      <div id="loginDiv" class="hex">
+      <div id="loginDiv" class="hex-hide">
 	      <a class="heximg">
 		      <button onclick="closeDiv()" style="position: absolute;background: none;top: 23%;left: 91%;border: none;">X</button>
 		      <div class="hex-text"><form><input type="text"><input type="password"></form></div>
@@ -182,7 +191,7 @@
         var height = window.innerHeight;
         loginDiv.style.display = "block";
         loginDiv.style.position = "absolute"
-        loginDiv.style.scale = "240%";
+
         //calculamos la posición del div
         var top = height / 2 - loginDiv.clientHeight / 2;
         var left = width / 2 - loginDiv.clientWidth / 2;
