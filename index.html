@@ -202,8 +202,8 @@
 	    var height = window.innerHeight;
 	    var width = window.innerWidth;
 	    // Establece la posición del div
-	    loginDiv.style.top = (height / 2) - (loginDiv.offsetWidth / 2) + "px";
-	    loginDiv.style.left = (width / 2) - (loginDiv.offsetHeight / 2) + "px";
+	    loginDiv.style.top = (height - loginDiv.offsetHeight) / 2 + "px";
+	    loginDiv.style.left = (width - loginDiv.offsetWidth) / 2 + "px";
 	
 	    // Establece una transición que aumente el escalado del div al 100% durante 1 segundo
 	    loginDiv.style.transition = "transform 1s ease-in-out";
