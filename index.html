@@ -195,12 +195,19 @@
     <script>
     function showDiv() {
       var loginDiv = document.getElementById("loginDiv");
+	    // Establece el escalado del div nuevo al 0% en ambas dimensiones
+	    loginDiv.style.transform = "scale(0, 0)";
+	
+	    // Establece un punto de origen para la transformación
+	    loginDiv.style.transformOrigin = "50% 50%";
+	
+	    // Establece una transición que aumente el escalado del div al 100% durante 0,5 segundos
+	    loginDiv.style.transition = "transform 0.5s ease-in-out";
+
       if (loginDiv) {
         //obtenemos el ancho y la altura de la ventana del navegador
         var width = window.innerWidth;
         var height = window.innerHeight;
-	loginDiv.style.transform = "scale(1)";
-	loginDiv.style.transition = "transform 0.5s ease-in-out";
         loginDiv.style.display = "block";
         loginDiv.style.position = "absolute"
 
@@ -213,6 +220,7 @@
         loginDiv.style.left = left + "px";
 	
       }
+
     }
   function closeDiv() {
     var loginDiv = document.getElementById("loginDiv"); 
