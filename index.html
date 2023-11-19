@@ -193,32 +193,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/0c5d261ad6.js" crossorigin="anonymous"></script>
     <script>
-   function showDiv() {
-    const loginDiv = document.querySelector("#loginDiv");
+ function showDiv() {
+      var loginDiv = document.getElementById("loginDiv");
 
-    // Establece el escalado del div nuevo al 0% en ambas dimensiones
-    loginDiv.style.transform = "scale(0, 0)";
+      if (loginDiv) {
 
-    // Establece un punto de origen para la transformación
-    loginDiv.style.transformOrigin = "50% 50%";
+	    // Establece la posición del div
+	    loginDiv.style.top = (height / 2) - (loginDiv.offsetWidth / 2) + "px";
+	    loginDiv.style.left = (width / 2) - (loginDiv.offsetHeight / 2) + "px";
+	
+	    // Establece una transición que aumente el escalado del div al 100% durante 0,5 segundos
+	    loginDiv.style.transition = "transform 0.5s ease-in-out";
+	    loginDiv.style.transform = "scale(0)";
+	
+	    // Muestra el div
+	    loginDiv.style.display = "block";
+	
+      }
 
-    // Establece una transición que aumente el escalado del div al 100% durante 0,5 segundos
-    loginDiv.style.transition = "transform 0.5s ease-in-out";
-
-    if (loginDiv) {
-        //obtenemos el ancho y la altura de la ventana del navegador
-        const width = window.innerWidth;
-        const height = window.innerHeight;
-
-        //mostramos el div
-        loginDiv.style.display = "block";
-
-        //establecemos la posición del div
-        loginDiv.style.position = "absolute";
-        loginDiv.style.top = (height / 2) - (loginDiv.offsetWidth / 2) + "px";
-        loginDiv.style.left = (width / 2) - (loginDiv.offsetHeight / 2) + "px";
     }
-}
     </script>
   function closeDiv() {
     var loginDiv = document.getElementById("loginDiv"); 
