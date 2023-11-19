@@ -198,21 +198,16 @@
       var loginDiv = document.getElementById("loginDiv");
 
       if (loginDiv) {
-	    var width = window.innerWidth;
-       	    var height = window.innerHeight;
-            //calculamos la posición del div
-            var top = height / 2 - loginDiv.clientHeight / 2;
-            var left = width / 2 - loginDiv.clientWidth / 2;
-            //establecemos la posición del div
-            loginDiv.style.top = top + "px";
-            loginDiv.style.left = left + "px";
-	
-	    // Establece una transición que aumente el escalado del div al 100% durante 0,5 segundos
-	    loginDiv.style.transition = "transform 0.5s ease-in-out";
-	    loginDiv.style.transform = "scale(1)";
-	
-	    // Muestra el div
-	    loginDiv.style.display = "block";
+    // Establece la posición del div
+    loginDiv.style.top = (height / 2) - (loginDiv.offsetWidth / 2) + "px";
+    loginDiv.style.left = (width / 2) - (loginDiv.offsetHeight / 2) + "px";
+
+    // Establece una transición que aumente el escalado del div al 100% durante 1 segundo
+    loginDiv.style.transition = "transform 1s ease-in-out";
+    loginDiv.style.transform = "scale(0)";
+
+    // Muestra el div
+    loginDiv.style.display = "block";
 	    loginDiv.style.position = "absolute";
 	
       }
