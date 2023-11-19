@@ -37,7 +37,7 @@
           margin-bottom: 100px;
         }
 	.hex-hide {
-          display: flex;
+          display: none;
           position: relative;
           width: 480px;
           height: 530px;
@@ -121,9 +121,7 @@
 	  display: none;
 	  position: relative;
 	  width: 480;
-	  height: 530;
-	  transform: scale(0)
-
+	  height: 530:
         }	
         .hex-text {
             position: absolute;
@@ -195,26 +193,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/0c5d261ad6.js" crossorigin="anonymous"></script>
     <script>
- function showDiv() {
-     var loginDiv = document.getElementById("loginDiv");
+function showDiv() {
+    var loginDiv = document.getElementById("loginDiv");
 
-    // Establece la posición del div
-    loginDiv.style.top = (height - loginDiv.offsetHeight) / 2 + "px";
-    loginDiv.style.left = (width - loginDiv.offsetWidth) / 2 + "px";
+    // Calculate the scaled dimensions
+    var scaledWidth = loginDiv.offsetWidth * loginDiv.style.transform;
+    var scaledHeight = loginDiv.offsetHeight * loginDiv.style.transform;
 
-    // Declara las variables height y width
-    var height = window.innerHeight;
-    var width = window.innerWidth;
+    // Set the adjusted position
+    loginDiv.style.top = (height - scaledHeight) / 2 + "px";
+    loginDiv.style.left = (width - scaledWidth) / 2 + "px";
 
-    // Establece una transición que aumente el escalado del div al 100% durante 1 segundo
+    // Apply the scaling transformation
     loginDiv.style.transition = "transform 1s ease-in-out";
     loginDiv.style.transform = "scale(1)";
 
-    // Muestra el div
+    // Show the login form
     loginDiv.style.display = "block";
     loginDiv.style.position = "absolute";
-
-    }
+}
     </script>
 <script>
   function closeDiv() {
