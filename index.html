@@ -194,24 +194,26 @@
     <script src="https://kit.fontawesome.com/0c5d261ad6.js" crossorigin="anonymous"></script>
     <script>
 function showDiv() {
-    var loginDiv = document.getElementById("loginDiv");
-    var width = window.innerWidth;
-    var height = window.innerHeight;
-    // Calculate the scaled dimensions
-    var scaledWidth = loginDiv.offsetWidth * loginDiv.style.transform;
-    var scaledHeight = loginDiv.offsetHeight * loginDiv.style.transform;
+  var loginDiv = document.getElementById("loginDiv");
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  // Set the transition property
+  loginDiv.style.transition = "transform 1s ease-in-out";
 
-    // Set the adjusted position
-    loginDiv.style.top = (height - scaledHeight) / 2 + "px";
-    loginDiv.style.left = (width - scaledWidth) / 2 + "px";
+  // Apply the scaling transformation
+  loginDiv.style.transform = "scale(1)";
 
-    // Apply the scaling transformation
-    loginDiv.style.transition = "transform 1s ease-in-out";
-    loginDiv.style.transform = "scale(1)";
+  // Calculate the scaled dimensions
+  var scaledWidth = loginDiv.offsetWidth * loginDiv.style.transform;
+  var scaledHeight = loginDiv.offsetHeight * loginDiv.style.transform;
 
-    // Show the login form
-    loginDiv.style.display = "block";
-    loginDiv.style.position = "absolute";
+  // Set the adjusted position
+  loginDiv.style.top = (height - scaledHeight) / 2 + "px";
+  loginDiv.style.left = (width - scaledWidth) / 2 + "px";
+
+  // Show the login form
+  loginDiv.style.display = "block";
+  loginDiv.style.position = "absolute";
 }
     </script>
 <script>
