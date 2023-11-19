@@ -158,31 +158,31 @@
     <script src="https://kit.fontawesome.com/0c5d261ad6.js" crossorigin="anonymous"></script>
 <script>
 function showDiv() {
-  var hideDiv = document.getElementById("hideDiv");
+  var hideDiv1 = document.getElementById("hideDiv1");
   var width = window.innerWidth;
   var height = window.innerHeight;
 
   // Set the transition property
-  hideDiv.style.transition = "transform 1s ease-in-out";
+  hideDiv1.style.transition = "transform 1s ease-in-out";
 
   // Check if the transform property is already set to scale(0)
-  if (!hideDiv.style.transform.startsWith("scale(0)")) {
-    hideDiv.style.transform = "scale(0)";
+  if (!hideDiv1.style.transform.startsWith("scale(0)")) {
+    hideDiv1.style.transform = "scale(0)";
   }
 
-  hideDiv.style.display = "block";
-  hideDiv.style.position = "absolute";
+  hideDiv1.style.display = "block";
+  hideDiv1.style.position = "absolute";
 
   // Calculate the position of the div
-  var top = height / 2 - hideDiv.clientHeight / 2;
-  var left = width / 2 - hideDiv.clientWidth / 2;
+  var top = height / 2 - hideDiv1.clientHeight / 2;
+  var left = width / 2 - hideDiv1.clientWidth / 2;
 
   // Set the position of the div
-  hideDiv.style.top = top + "px";
-  hideDiv.style.left = left + "px";
+  hideDiv1.style.top = top + "px";
+  hideDiv1.style.left = left + "px";
 
   // Show the login form
-  hideDiv.style.transform = "scale(1)";
+  hideDiv1.style.transform = "scale(1)";
 }
     </script>
 
