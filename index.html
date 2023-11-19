@@ -210,8 +210,8 @@ function showDiv() {
   loginDiv.style.position = "absolute";
 
   // Calculate the position of the div
-  var top = height / 2 - loginDiv.clientHeight / 2;
-  var left = width / 2 - loginDiv.clientWidth / 2;
+  var top = height / 2 - loginDiv.getBoundingClientRect().height / 2;
+  var left = width / 2 - loginDiv.getBoundingClientRect().width / 2;
 
   // Set the position of the div
   loginDiv.style.top = top + "px";
