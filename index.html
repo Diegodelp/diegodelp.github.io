@@ -197,7 +197,8 @@
       var loginDiv = document.getElementById("loginDiv");
 
       if (loginDiv) {
-
+	    var width = window.innerWidth;
+       	    var height = window.innerHeight;
 	    // Establece la posición del div
 	    loginDiv.style.top = (height / 2) - (loginDiv.offsetWidth / 2) + "px";
 	    loginDiv.style.left = (width / 2) - (loginDiv.offsetHeight / 2) + "px";
