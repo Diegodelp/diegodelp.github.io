@@ -199,14 +199,17 @@ function showDiv() {
   var height = window.innerHeight;
   // Set the transition property
   loginDiv.style.transition = "transform 1s ease-in-out";
-  loginDiv.style.transform = "scale(0)";
+  var validador = loginDiv.style.transform = "scale(0)";
 
   loginDiv.style.display = "block";
   loginDiv.style.position = "absolute";
   
 
   // Apply the scaling transformation
-  
+
+  if (validador = loginDiv.style.transform = "scale(0)"){
+	loginDiv.style.transform = "scale(1)
+  }
 
   //calculamos la posición del div
   var top = height / 2 - loginDiv.clientHeight / 2;
