@@ -195,7 +195,8 @@
     <script>
 function showDiv() {
     var loginDiv = document.getElementById("loginDiv");
-
+    var width = window.innerWidth;
+    var height = window.innerHeight;
     // Calculate the scaled dimensions
     var scaledWidth = loginDiv.offsetWidth * loginDiv.style.transform;
     var scaledHeight = loginDiv.offsetHeight * loginDiv.style.transform;
