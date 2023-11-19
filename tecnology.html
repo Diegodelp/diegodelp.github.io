@@ -139,6 +139,9 @@
   <div style="background: white;margin: auto;width: 100%;margin-top: -50px;height: 100%; padding: 1px;"">
 	<div id="hideDiv1" style="display:none; background:#899195; width: auto; height:100%; margin: 10px;top: -10px;">
 		
+	</div>
+	<div id="hideDiv2" style="display:none; background:#899195; width: auto; height:100%; margin: 10px;top: -10px;">
+		
 	</div>  
   </div>
  
@@ -163,6 +166,7 @@ function showDiv() {
   var height = window.innerHeight;
 
   // Set the transition property
+  hideDiv2.style.display = "none";
   hideDiv1.style.transition = "transform 1s ease-in-out";
 
   // Check if the transform property is already set to scale(0)
@@ -182,6 +186,36 @@ function showDiv() {
 
   // Show the login form
   hideDiv1.style.transform = "scale(1)";
+}
+    </script>
+<script>
+function showDiv2() {
+  var hideDiv2 = document.getElementById("hideDiv2");
+  var hideDiv1 = document.getElementById("hideDiv1");
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+
+  // Set the transition property
+  hideDiv1.style.display = "none"
+  hideDiv2.style.transition = "transform 1s ease-in-out";
+
+  // Check if the transform property is already set to scale(0)
+  if (!hideDiv2.style.transform.startsWith("scale(0)")) {
+    hideDiv2.style.transform = "scale(0)";
+  }
+
+  hideDiv2.style.display = "block";
+  hideDiv2.style.position = "relative";
+
+  // Calculate the position of the div
+  var top = height / 2 - hideDiv2.clientHeight / 2;
+  var left = width / 2 - hideDiv2.clientWidth / 2;
+
+  // Set the position of the div
+
+
+  // Show the login form
+  hideDiv2.style.transform = "scale(1)";
 }
     </script>
 
