@@ -198,7 +198,9 @@ function showDiv() {
   var width = window.innerWidth;
   var height = window.innerHeight;
   // Set the transition property
-  loginDiv.style.transition = "transform 1s ease-in-out";
+  loginDiv.style.display = "block";
+  loginDiv.style.position = "absolute";
+  loginDiv.style.animation = "scale 1s ease-in-out";
 
   // Apply the scaling transformation
   loginDiv.style.transform = "scale(1)";
@@ -211,8 +213,7 @@ function showDiv() {
   loginDiv.style.left = left + "px";
 
   // Show the login form
-  loginDiv.style.display = "block";
-  loginDiv.style.position = "absolute";
+
 }
     </script>
 <script>
