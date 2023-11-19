@@ -197,29 +197,28 @@ function showDiv() {
   var loginDiv = document.getElementById("loginDiv");
   var width = window.innerWidth;
   var height = window.innerHeight;
+
   // Set the transition property
   loginDiv.style.transition = "transform 1s ease-in-out";
-  loginDiv.style.transform = "scale(0)";
+
+  // Check if the transform property is already set to scale(0)
+  if (!loginDiv.style.transform.startsWith("scale(0)")) {
+    loginDiv.style.transform = "scale(0)";
+  }
 
   loginDiv.style.display = "block";
   loginDiv.style.position = "absolute";
-  
 
-  // Apply the scaling transformation
-  var validador = loginDiv.style.transform = "scale(0)";
-  if (validador){
-	loginDiv.style.transform = "scale(1)";
-  }
-
-  //calculamos la posición del div
+  // Calculate the position of the div
   var top = height / 2 - loginDiv.clientHeight / 2;
   var left = width / 2 - loginDiv.clientWidth / 2;
-  //establecemos la posición del div
+
+  // Set the position of the div
   loginDiv.style.top = top + "px";
   loginDiv.style.left = left + "px";
 
   // Show the login form
-
+  loginDiv.style.transform = "scale(1)";
 }
     </script>
 <script>
