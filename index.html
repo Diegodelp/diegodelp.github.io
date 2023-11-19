@@ -121,8 +121,6 @@
 	  position: relative;
 	  width: 480;
 	  height: 530;
-	  transform: scale(0);
-	  transition: transform 0.5s ease-in-out;
         }	
         .hex-text {
             position: absolute;
@@ -200,9 +198,11 @@
         //obtenemos el ancho y la altura de la ventana del navegador
         var width = window.innerWidth;
         var height = window.innerHeight;
+	loginDiv.style.transform = "scale(0)";
+	loginDiv.style.transition = "transform 0.5s ease-in-out";
         loginDiv.style.display = "block";
         loginDiv.style.position = "absolute"
-	loginDiv.style.transform = "scale(1,1)"
+
 
         //calculamos la posición del div
         var top = height / 2 - loginDiv.clientHeight / 2;
