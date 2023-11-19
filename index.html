@@ -203,13 +203,12 @@ function showDiv() {
   // Apply the scaling transformation
   loginDiv.style.transform = "scale(1)";
 
-  // Calculate the scaled dimensions
-  var scaledWidth = loginDiv.offsetWidth * loginDiv.style.transform;
-  var scaledHeight = loginDiv.offsetHeight * loginDiv.style.transform;
-
-  // Set the adjusted position
-  loginDiv.style.top = (height - scaledHeight) / 2 + "px";
-  loginDiv.style.left = (width - scaledWidth) / 2 + "px";
+  //calculamos la posición del div
+  var top = height / 2 - loginDiv.clientHeight / 2;
+  var left = width / 2 - loginDiv.clientWidth / 2;
+  //establecemos la posición del div
+  loginDiv.style.top = top + "px";
+  loginDiv.style.left = left + "px";
 
   // Show the login form
   loginDiv.style.display = "block";
