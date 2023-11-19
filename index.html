@@ -196,25 +196,23 @@
     <script src="https://kit.fontawesome.com/0c5d261ad6.js" crossorigin="anonymous"></script>
     <script>
  function showDiv() {
-      var loginDiv = document.getElementById("loginDiv");
+     var loginDiv = document.getElementById("loginDiv");
 
-      if (loginDiv) {
-	    // Declara las variables height y width
-	    var height = window.innerHeight;
-	    var width = window.innerWidth;
-	    // Establece la posición del div
-	    loginDiv.style.top = (height - loginDiv.offsetHeight) / 2 + "px";
-	    loginDiv.style.left = (width - loginDiv.offsetWidth) / 2 + "px";
-	
-	    // Establece una transición que aumente el escalado del div al 100% durante 1 segundo
-	    loginDiv.style.transition = "transform 1s ease-in-out";
-	    loginDiv.style.transform = "scale(1)";
-	
-	    // Muestra el div
-	    loginDiv.style.display = "block";
-	    loginDiv.style.position = "absolute";
-	
-      }
+    // Establece la posición del div
+    loginDiv.style.top = (height - loginDiv.offsetHeight) / 2 + "px";
+    loginDiv.style.left = (width - loginDiv.offsetWidth) / 2 + "px";
+
+    // Declara las variables height y width
+    var height = window.innerHeight;
+    var width = window.innerWidth;
+
+    // Establece una transición que aumente el escalado del div al 100% durante 1 segundo
+    loginDiv.style.transition = "transform 1s ease-in-out";
+    loginDiv.style.transform = "scale(1)";
+
+    // Muestra el div
+    loginDiv.style.display = "block";
+    loginDiv.style.position = "absolute";
 
     }
     </script>
