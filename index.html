@@ -319,22 +319,17 @@ function showDivTech() {
   // Show the login form
   openDivT.style.transform = "scale(1)";
 	
-  // Set the transition property
-  openDivT1.style.transition = "transform 1s ease-in-out";
-	
-  // Check if the transform property is already set to scale(0)
-  if (!openDivT1.style.transform.startsWith("scale(0)")) {
-    openDivT1.style.transform = "scale(0)";
-  }
+openDivT1.style.top = "0"; // Set initial top position
+openDivT1.style.left = "0"; // Set initial left position
+openDivT1.style.transform = "scale(0)"; // Set initial transform scale
+openDivT1.style.display = "block"; // Display the div
+openDivT1.style.position = "absolute"; // Set position to absolute
 
-  // Reset the position of the div
-
-  openDivT1.style.display = "block";
-  openDivT1.style.position = "absolute";
-
-  // Show the login form
-
-  openDivT1.style.transform = "scale(1)";
+// Animate the div to its final position and size
+openDivT1.style.transition = "transform 1s ease-in-out";
+openDivT1.style.transform = "scale(1)"; // Scale to full size
+openDivT1.style.width = "50vh"; // Set final width
+openDivT1.style.height = "50%"; // Set final height
 
 }
     </script>
