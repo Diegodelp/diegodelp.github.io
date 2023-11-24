@@ -85,16 +85,7 @@
           -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
           clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
         }
-	.hex-hide .child-div {
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  width: 100%;
-	  height: 100%;
-	  background-color: white;
-	  -webkit-clip-path: inherit;
-	  clip-path: inherit;
-	}
+
         .hex:hover{
             scale: 1.1;
             transition: scale 0.5s;
@@ -167,7 +158,9 @@
 	  display: none;
 	  position: relative;
 	  width: 480;
-	  height: 530:
+	  height: 530;
+	  top: 0;
+	  left: 0;
         }
 
         .hex-text {
@@ -287,8 +280,6 @@ function showDivTech() {
   var height = window.innerHeight;
 
   // Set the transition property
-  loginDivT.style.top = "0px";
-  loginDivT.style.left = "0px";
   loginDivT.style.transition = "transform 1s ease-in-out";
 
   // Check if the transform property is already set to scale(0)
