@@ -351,14 +351,20 @@ function closeDiv() {
 	loginDiv.style.display = "none";
   }
 function closeDivTech() {
-    var openDivT = document.getElementById("openDivTech");
-    var openDivT1 = document.getElementById("openDivTech1");
-	openDivT.style.transition = "transform 1s ease-in-out";
-	openDivT1.style.transition = "transform 1s ease-in-out";
-	openDivT.style.transform = "scale(0)";
-	openDivT1.style.transform = "scale(0)";
-	openDivT.style.display = "none";
-	openDivT1.style.display = "none";
+  var openDivT = document.getElementById("openDivTech");
+  var openDivT1 = document.getElementById("openDivTech1");
+
+  // Set the transition property for animation
+  openDivT.style.transition = "transform 1s ease-in-out";
+  openDivT1.style.transition = "transform 1s ease-in-out";
+
+  // Animate the divs to scale down
+  openDivT.style.transform = "scale(0)";
+  openDivT1.style.transform = "scale(0)";
+
+  // Hide the divs after animation completes
+  openDivT.style.display = "none";
+  openDivT1.style.display = "none";
 	
   }
   </script>
