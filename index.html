@@ -230,9 +230,9 @@
       <div onclick="showDiv()" class="hex"><a class="heximg"><div class="hex-text">Login/Register</div><img class="heximg" src="7.png" alt="some"></a></div>
       <div onclick="showDivTech()" class="hex"><a class="heximg" href="#"><div class="hex-text">Technology</div><img class="heximg" src="PPRW.jpg" alt="some"></a></div>
       <div class="hex"><a class="heximg" href="default.asp"><div class="hex-text"></div><img class="heximg" src="empty.webp" alt="some"></a></div>
-      <div class="hex"><a class="heximg" href="roadmap.html"><div class="hex-text">Roadmap</div><img class="heximg" src="ROADMAP.jpg" alt="some"></a></div>
+      <div onclick="showDivRM()" class="hex"><a class="heximg" href="roadmap.html"><div class="hex-text">Roadmap</div><img class="heximg" src="ROADMAP.jpg" alt="some"></a></div>
       <div class="hex"><a class="heximg" href="default.asp"><div class="hex-text"></div><img class="heximg" src="empty.webp" alt="some"></a></div>
-      <div class="hex"><a class="heximg" href="default.asp"><div class="hex-text">Contact Us</div><img class="heximg" src="CONTACT.jpg" alt="some"></a></div>
+      <div onclick="showDivC()" class="hex"><a class="heximg" href="default.asp"><div class="hex-text">Contact Us</div><img class="heximg" src="CONTACT.jpg" alt="some"></a></div>
       <div id="loginDiv" class="hex-hide">
 	      <a class="heximg">
 		      <button onclick="closeDiv()" style="position: absolute;background: white;top: 23%;left: 91%;border: 1px solid black; color: black; border-radius: 10px; box-shadow: 1px 1px 5px 1px black;">X</button>
@@ -297,26 +297,26 @@
       		</div>
       </div>
       <div >
-	      <div class="blank" id="openDivW1">
+	      <div class="blank" id="openDivRM1">
 		EL DIV BLANCO
 		</div>
-	      <div id="openDivW" onclick="closeDivW()" class="hex-hide">
+	      <div id="openDivRM" onclick="closeDivRM()" class="hex-hide">
 	       <a class="heximg">
-		      <button onclick="closeDivW()" style="position: absolute;background: white;top: 23%;left: 91%;border: 1px solid black; color: black; border-radius: 10px; box-shadow: 1px 1px 5px 1px black;">X</button>
+		      <button onclick="closeDivRM()" style="position: absolute;background: white;top: 23%;left: 91%;border: 1px solid black; color: black; border-radius: 10px; box-shadow: 1px 1px 5px 1px black;">X</button>
 		      	
-		        <img class="heximg" src="CONTRACTPPRW.jpg">
+		        <img class="heximg" src="ROADMAP.jpg">
 	      	 </a>
       		</div>
       </div>
       <div >
-	      <div class="blank" id="openDivW1">
+	      <div class="blank" id="openDivC1">
 		EL DIV BLANCO
 		</div>
-	      <div id="openDivW" onclick="closeDivW()" class="hex-hide">
+	      <div id="openDivC" onclick="closeDivC()" class="hex-hide">
 	       <a class="heximg">
-		      <button onclick="closeDivW()" style="position: absolute;background: white;top: 23%;left: 91%;border: 1px solid black; color: black; border-radius: 10px; box-shadow: 1px 1px 5px 1px black;">X</button>
+		      <button onclick="closeDivC()" style="position: absolute;background: white;top: 23%;left: 91%;border: 1px solid black; color: black; border-radius: 10px; box-shadow: 1px 1px 5px 1px black;">X</button>
 		      	
-		        <img class="heximg" src="CONTRACTPPRW.jpg">
+		        <img class="heximg" src="contact.jpg">
 	      	 </a>
       		</div>
       </div>
@@ -601,8 +601,122 @@ function showDivPS() {
 
   // Show the login form
   openDivPS1.style.transform = "scale(1)";
+}
+function showDivRM() {
+  var openDivRM = document.getElementById("openDivRM");
+  var openDivRM1 = document.getElementById("openDivRM1");
+  var width = window.innerWidth;
+  var height = window.innerHeight;
 
+  // Set the transition property
+  openDivRM.style.transition = "transform 1s ease-in-out";
 
+  // Check if the transform property is already set to scale(0)
+  if (!openDivRM.style.transform.startsWith("scale(0)")) {
+    openDivRM.style.transform = "scale(0)";
+  }
+
+  // Reset the position of the div
+
+  openDivRM.style.display = "block";
+  openDivRM.style.position = "absolute";
+  openDivRM.style.width = "38vh";
+  openDivRM.style.height = "38%";
+
+  // Calculate the position of the div
+  var top = height / 2 - openDivRM.clientHeight / 2;
+  var left = width / 2 - openDivRM.clientWidth / 2;
+
+  // Set the position of the div
+  openDivRM.style.top = 0;
+  openDivRM.style.left = 0;
+
+  // Show the login form
+  openDivRM.style.transform = "scale(1)";
+
+// Set the transition property
+  openDivRM1.style.transition = "transform 1s ease-in-out";
+
+  // Check if the transform property is already set to scale(0)
+  if (!openDivRM1.style.transform.startsWith("scale(0)")) {
+    openDivRM1.style.transform = "scale(0)";
+  }
+
+  // Reset the position of the div
+
+  openDivRM1.style.display = "block";
+  openDivRM1.style.position = "absolute";
+  openDivRM1.style.width = "100vw";
+  openDivRM1.style.height = "100vh";
+
+  // Calculate the position of the div
+  var top = height / 2 - openDivRM1.clientHeight / 2;
+  var left = width / 2 - openDivRM1.clientWidth / 2;
+
+  // Set the position of the div
+  openDivRM1.style.top = 0;
+  openDivRM1.style.left = 0;
+
+  // Show the login form
+  openDivRM1.style.transform = "scale(1)";
+}
+function showDivC() {
+  var openDivC = document.getElementById("openDivC");
+  var openDivC1 = document.getElementById("openDivC1");
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+
+  // Set the transition property
+  openDivC.style.transition = "transform 1s ease-in-out";
+
+  // Check if the transform property is already set to scale(0)
+  if (!openDivC.style.transform.startsWith("scale(0)")) {
+    openDivC.style.transform = "scale(0)";
+  }
+
+  // Reset the position of the div
+
+  openDivC.style.display = "block";
+  openDivC.style.position = "absolute";
+  openDivC.style.width = "38vh";
+  openDivC.style.height = "38%";
+
+  // Calculate the position of the div
+  var top = height / 2 - openDivRM.clientHeight / 2;
+  var left = width / 2 - openDivRM.clientWidth / 2;
+
+  // Set the position of the div
+  openDivC.style.top = 0;
+  openDivC.style.left = 0;
+
+  // Show the login form
+  openDivC.style.transform = "scale(1)";
+
+// Set the transition property
+  openDivC1.style.transition = "transform 1s ease-in-out";
+
+  // Check if the transform property is already set to scale(0)
+  if (!openDivC1.style.transform.startsWith("scale(0)")) {
+    openDivC1.style.transform = "scale(0)";
+  }
+
+  // Reset the position of the div
+
+  openDivC1.style.display = "block";
+  openDivC1.style.position = "absolute";
+  openDivC1.style.width = "100vw";
+  openDivC1.style.height = "100vh";
+
+  // Calculate the position of the div
+  var top = height / 2 - openDivC1.clientHeight / 2;
+  var left = width / 2 - openDivC1.clientWidth / 2;
+
+  // Set the position of the div
+  openDivC1.style.top = 0;
+  openDivC1.style.left = 0;
+
+  // Show the login form
+  openDivC1.style.transform = "scale(1)";
 }
     </script>
 <script>
@@ -657,6 +771,30 @@ function closeDivPS() {
   // Make the divs visible
   openDivPS.style.transform = "scale(0)";
   openDivPS1.style.transform = "scale(0)";
+  }
+function closeDivRM() {
+  var openDivRM = document.getElementById("openDivRM");
+  var openDivRM1 = document.getElementById("openDivRM1");
+
+  // Set the transition property for animation
+  openDivRM.style.transition = "transform 1s ease-in-out";
+  openDivRM1.style.transition = "transform 1s ease-in-out";
+
+  // Make the divs visible
+  openDivRM.style.transform = "scale(0)";
+  openDivRM1.style.transform = "scale(0)";
+  }
+function closeDivC() {
+  var openDivC = document.getElementById("openDivC");
+  var openDivC1 = document.getElementById("openDivC1");
+
+  // Set the transition property for animation
+  openDivC.style.transition = "transform 1s ease-in-out";
+  openDivC1.style.transition = "transform 1s ease-in-out";
+
+  // Make the divs visible
+  openDivC.style.transform = "scale(0)";
+  openDivC1.style.transform = "scale(0)";
   }
   </script>
 
