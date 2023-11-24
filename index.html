@@ -320,7 +320,8 @@ function showDivTech() {
   openDivT.style.transform = "scale(1)";
 	
   // Set the transition property
-
+  openDivT1.style.transition = "transform 1s ease-in-out";
+	
   // Check if the transform property is already set to scale(0)
   if (!openDivT1.style.transform.startsWith("scale(0)")) {
     openDivT1.style.transform = "scale(0)";
@@ -331,12 +332,8 @@ function showDivTech() {
   openDivT1.style.display = "block";
   openDivT1.style.position = "absolute";
 
-
-  // Set the position of the div
-
-
   // Show the login form
-  openDivT1.style.transition = "transform 1s ease-in-out";
+
   openDivT1.style.transform = "scale(1)";
 
 }
