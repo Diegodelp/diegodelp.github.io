@@ -178,6 +178,7 @@
 	   width: 100%;
 	   height: 100%;
 	   transform: scale(0);
+	   background: white;
 	}
         
         
@@ -318,7 +319,6 @@ function showDivTech() {
   openDivT.style.transform = "scale(1)";
 	
   // Set the transition property
-  openDivT1.style.transition = "transform 1s ease-in-out";
 
   // Check if the transform property is already set to scale(0)
   if (!openDivT1.style.transform.startsWith("scale(0)")) {
@@ -337,6 +337,7 @@ function showDivTech() {
   openDivT1.style.left = 0;
 
   // Show the login form
+  openDivT1.style.transition = "transform 1s ease-in-out";
   openDivT1.style.transform = "scale(1)";
 
 }
