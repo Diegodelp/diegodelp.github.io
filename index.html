@@ -174,12 +174,9 @@
         }
 	.blank {
 	  display: none;
-	  position: fixed;
-	  transform: scale(1);
-	  width: 100vw;
-	  height: 100vh;
+	  position: absolute;
+	  transform: scale(0);
 	  background: white;
-	  transition: transform 1s ease-in-out 0s;
 	}
         
         
@@ -318,18 +315,33 @@ function showDivTech() {
 
   // Show the login form
   openDivT.style.transform = "scale(1)";
-	
-openDivT1.style.top = "0"; // Set initial top position
-openDivT1.style.left = "0"; // Set initial left position
-openDivT1.style.transform = "scale(0)"; // Set initial transform scale
-openDivT1.style.display = "block"; // Display the div
-openDivT1.style.position = "absolute"; // Set position to absolute
 
-// Animate the div to its final position and size
-openDivT1.style.transition = "transform 1s ease-in-out";
-openDivT1.style.transform = "scale(1)"; // Scale to full size
-openDivT1.style.width = "100vw"; // Set final width
-openDivT1.style.height = "100vh"; // Set final height
+// Set the transition property
+  openDivT1.style.transition = "transform 1s ease-in-out";
+
+  // Check if the transform property is already set to scale(0)
+  if (!openDivT1.style.transform.startsWith("scale(0)")) {
+    openDivT1.style.transform = "scale(0)";
+  }
+
+  // Reset the position of the div
+
+  openDivT1.style.display = "block";
+  openDivT1.style.position = "absolute";
+  openDivT1.style.width = "50vh";
+  openDivT1.style.height = "50%";
+
+  // Calculate the position of the div
+  var top = height / 2 - openDivT1.clientHeight / 2;
+  var left = width / 2 - openDivT1.clientWidth / 2;
+
+  // Set the position of the div
+  openDivT1.style.top = 0;
+  openDivT1.style.left = 0;
+
+  // Show the login form
+  openDivT1.style.transform = "scale(1)";
+
 
 }
     </script>
