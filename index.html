@@ -271,36 +271,34 @@ function showDiv() {
   // Show the login form
   loginDiv.style.transform = "scale(1)";
 }
-    </script>
-<script>
 function showDivTech() {
-  var loginDiv = document.getElementById("loginDivTech");
+  var loginDivT = document.getElementById("loginDivTech");
   var width = window.innerWidth;
   var height = window.innerHeight;
 
   // Set the transition property
-  loginDiv.style.transition = "transform 1s ease-in-out";
+  loginDivT.style.transition = "transform 1s ease-in-out";
 
   // Check if the transform property is already set to scale(0)
-  if (!loginDiv.style.transform.startsWith("scale(0)")) {
-    loginDiv.style.transform = "scale(0)";
+  if (!loginDivT.style.transform.startsWith("scale(0)")) {
+    loginDivT.style.transform = "scale(0)";
   }
 
-  loginDiv.style.display = "block";
-  loginDiv.style.position = "absolute";
+  loginDivT.style.display = "block";
+  loginDivT.style.position = "absolute";
 
   // Calculate the position of the div
-  var top = height / 2 - loginDiv.clientHeight / 2;
-  var left = width / 2 - loginDiv.clientWidth / 2;
+  var top = height / 2 - loginDivT.clientHeight / 2;
+  var left = width / 2 - loginDivT.clientWidth / 2;
 
   // Set the position of the div
-  loginDiv.style.top = top + "px";
+  loginDivT.style.top = top + "px";
   loginDiv.style.left = left + "px";
 
   // Show the login form
-  loginDiv.style.width = "100vh"
-  loginDiv.style.height = "100%"
-  loginDiv.style.transform = "scale(1)";
+  loginDivT.style.width = "100vh"
+  loginDivT.style.height = "100%"
+  loginDivT.style.transform = "scale(1)";
 }
     </script>
 <script>
