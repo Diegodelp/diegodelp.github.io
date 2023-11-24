@@ -279,16 +279,12 @@ function showDivTech() {
   var width = window.innerWidth;
   var height = window.innerHeight;
 
-  // Set the transition property
-  loginDivT.style.transition = "transform 1s ease-in-out";
-
   // Check if the transform property is already set to scale(0)
   if (!loginDivT.style.transform.startsWith("scale(0)")) {
     loginDivT.style.transform = "scale(0)";
   }
 
   // Reset the position of the div
-
   loginDivT.style.top = 0;
   loginDivT.style.left = 0;
   loginDivT.style.display = "block";
@@ -298,6 +294,7 @@ function showDivTech() {
 
 
   // Show the login form
+  loginDivT.style.transition = "transform 1s ease-in-out";
   loginDivT.style.transform = "scale(1)";
 }
     </script>
