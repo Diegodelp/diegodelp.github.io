@@ -359,8 +359,10 @@ function closeDivTech() {
   openDivT1.style.transition = "display 1s ease-in-out";
 
   // Make the divs visible
-  openDivT.style.visibility = "visible";
-  openDivT1.style.visibility = "visible";
+  openDivT.style.transform = "scale(1)";
+  openDivT1.style.transform = "scale(1)";
+  openDivT.style.transform = "scale(0)";
+  openDivT1.style.transform = "scale(0)";
 
   // Animate the divs to disappear
   openDivT.style.display = "none";
