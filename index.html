@@ -355,21 +355,16 @@ function closeDivTech() {
   var openDivT1 = document.getElementById("openDivTech1");
 
   // Set the transition property for animation
-  openDivT.style.transition = "transform 1s ease-in-out";
-  openDivT1.style.transition = "transform 1s ease-in-out";
+  openDivT.style.transition = "display 1s ease-in-out";
+  openDivT1.style.transition = "display 1s ease-in-out";
 
-  // Animate the divs to scale down
-  openDivT.style.transform = "scale(0)";
-  openDivT1.style.transform = "scale(0)";
+  // Make the divs visible
+  openDivT.style.visibility = "visible";
+  openDivT1.style.visibility = "visible";
 
-  // Set the display property to none after animation completes
-  openDivT.addEventListener("transitionend", function() {
-    openDivT.style.display = "none";
-  });
-  openDivT1.addEventListener("transitionend", function() {
-    openDivT1.style.display = "none";
-  });
-	
+  // Animate the divs to disappear
+  openDivT.style.display = "none";
+  openDivT1.style.display = "none";
   }
   </script>
 
