@@ -207,7 +207,7 @@
       </div>
       <div id="loginDivTech" class="hex-hide">
 	      <a class="heximg">
-		      <button onclick="closeDiv()" style="position: absolute;background: none;top: 23%;left: 91%;border: none;">X</button>
+		      <button onclick="closeDivTech()" style="position: absolute;background: none;top: 23%;left: 91%;border: none;">X</button>
 		      <div class="hex-text">
 			      <form>
 				      <i class="fas fa-user"></i><input type="text" placeholder="User">
@@ -300,6 +300,10 @@ function showDivTech() {
 <script>
   function closeDiv() {
     var loginDiv = document.getElementById("loginDiv"); 
+	loginDiv.style.display = "none";
+  }
+function closeDivT() {
+    var loginDiv = document.getElementById("loginDivTech"); 
 	loginDiv.style.display = "none";
   }
   </script>
