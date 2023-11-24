@@ -284,6 +284,10 @@ function showDivTech() {
     loginDivT.style.transform = "scale(0)";
   }
 
+  // Reset the position of the div
+  loginDivT.style.top = "0";
+  loginDivT.style.left = "0";
+
   loginDivT.style.display = "block";
   loginDivT.style.position = "absolute";
 
@@ -297,12 +301,12 @@ function showDivTech() {
 
   // Show the login form
   loginDivT.style.transform = "scale(1)";
-  loginDivT.style.width = "100vh"
-  loginDivT.style.height = "100%"
+  loginDivT.style.width = "100vh";
+  loginDivT.style.height = "100%";
 }
     </script>
 <script>
-  function closeDiv() {
+function closeDiv() {
     var loginDiv = document.getElementById("loginDiv"); 
 	loginDiv.style.display = "none";
   }
