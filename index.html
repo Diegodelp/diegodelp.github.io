@@ -100,11 +100,6 @@
             transition: scale 0.5s;
             
         }
-	 .hex-hide:hover{
-            scale: 1.1;
-            transition: scale 0.5s;
-            
-        }
         .hex:first-child {
           grid-row-start: 1;
           grid-column: 2 / span 2;
@@ -304,16 +299,11 @@ function showDivTech() {
 
   loginDivT.style.display = "block";
   loginDivT.style.position = "absolute";
-  loginDivT.style.width = "100vh";
-  loginDivT.style.height = "100%";
+  loginDivT.style.width = "50vh";
+  loginDivT.style.height = "50%";
+  loginDivT.style.top = "0px";
+  loginDivT.style.left = "0px";
 
-  // Calculate the position of the div
-  var top = height / 2 - loginDivT.clientHeight / 2;
-  var left = width / 2 - loginDivT.clientWidth / 2;
-
-  // Set the position of the div
-  loginDivT.style.top = top + "px";
-  loginDiv.style.left = left + "px";
 
   // Show the login form
   loginDivT.style.transform = "scale(1)";
