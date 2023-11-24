@@ -213,7 +213,8 @@
 		      <img class="heximg" src="7.png">
 	      </a>
       </div>
-      <div id="loginDivTech" class="hex-hide">
+      <div >
+	      <div id="openDivTech" class="hex-hide">
 	      <a class="heximg">
 		      <button onclick="closeDivTech()" style="position: absolute;background: none;top: 23%;left: 91%;border: none;">X</button>
 		      	<div>
@@ -227,9 +228,11 @@
 		      </div>
 	      </a>
       </div>
-	<div>
+	<div id="openDivTech1" style="display:none; background: white;">
 		EL DIV BLANCO
 	</div>
+      </div>
+      
     </section>
   
  
@@ -276,35 +279,58 @@ function showDiv() {
   loginDiv.style.transform = "scale(1)";
 }
 function showDivTech() {
-  var loginDivT = document.getElementById("loginDivTech");
+  var openDivT = document.getElementById("openDivTech");
+  var openDivT1 = document.getElementById("openDivTech1");
   var width = window.innerWidth;
   var height = window.innerHeight;
 
   // Set the transition property
-  loginDivT.style.transition = "transform 1s ease-in-out";
+  openDivT.style.transition = "transform 1s ease-in-out";
 
   // Check if the transform property is already set to scale(0)
-  if (!loginDivT.style.transform.startsWith("scale(0)")) {
-    loginDivT.style.transform = "scale(0)";
+  if (!openDivT.style.transform.startsWith("scale(0)")) {
+    openDivT.style.transform = "scale(0)";
   }
 
   // Reset the position of the div
 
-  loginDivT.style.display = "block";
-  loginDivT.style.position = "absolute";
-  loginDivT.style.width = "50vh";
-  loginDivT.style.height = "50%";
+  openDivT.style.display = "block";
+  openDivT.style.position = "absolute";
+  openDivT.style.width = "50vh";
+  openDivT.style.height = "50%";
 
   // Calculate the position of the div
-  var top = height / 2 - loginDivT.clientHeight / 2;
-  var left = width / 2 - loginDivT.clientWidth / 2;
+  var top = height / 2 - openDivT.clientHeight / 2;
+  var left = width / 2 - openDivT.clientWidth / 2;
 
   // Set the position of the div
-  loginDivT.style.top = 0;
-  loginDivT.style.left = 0;
+  openDivT.style.top = 0;
+  openDivT.style.left = 0;
 
   // Show the login form
-  loginDivT.style.transform = "scale(1)";
+  openDivT.style.transform = "scale(1)";
+	
+  // Set the transition property
+  openDivT1.style.transition = "transform 1s ease-in-out";
+
+  // Check if the transform property is already set to scale(0)
+  if (!openDivT1.style.transform.startsWith("scale(0)")) {
+    openDivT1.style.transform = "scale(0)";
+  }
+
+  // Reset the position of the div
+
+  openDivT1.style.display = "block";
+  openDivT1.style.position = "absolute";
+  openDivT.style.width = "100%";
+  openDivT.style.height = "100%";
+
+  // Set the position of the div
+  openDivT1.style.top = 0;
+  openDivT1.style.left = 0;
+
+  // Show the login form
+  openDivT1.style.transform = "scale(1)";
 
 }
     </script>
@@ -314,8 +340,8 @@ function closeDiv() {
 	loginDiv.style.display = "none";
   }
 function closeDivTech() {
-    var loginDiv = document.getElementById("loginDivTech"); 
-	loginDiv.style.display = "none";
+    var openDivT = document.getElementById("openDivTech"); 
+	openDivT.style.display = "none";
   }
   </script>
 
