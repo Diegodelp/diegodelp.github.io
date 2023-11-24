@@ -277,21 +277,31 @@ function showDivTech() {
   var width = window.innerWidth;
   var height = window.innerHeight;
 
+  // Set the transition property
+  loginDivT.style.transition = "transform 1s ease-in-out";
+
   // Check if the transform property is already set to scale(0)
   if (!loginDivT.style.transform.startsWith("scale(0)")) {
     loginDivT.style.transform = "scale(0)";
   }
 
   // Reset the position of the div
+
   loginDivT.style.display = "block";
   loginDivT.style.position = "absolute";
-  loginDivT.style.width = "50vh";
-  loginDivT.style.height = "50%";
 
+  // Calculate the position of the div
+  var top = height / 2 - loginDivT.clientHeight / 2;
+  var left = width / 2 - loginDivT.clientWidth / 2;
+
+  // Set the position of the div
+  loginDivT.style.top = top + "px";
+  loginDiv.style.left = left + "px";
 
   // Show the login form
-  loginDivT.style.transition = "transform 1s ease-in-out";
   loginDivT.style.transform = "scale(1)";
+  loginDivT.style.width = "100vh";
+  loginDivT.style.height = "100%";
 }
     </script>
 <script>
