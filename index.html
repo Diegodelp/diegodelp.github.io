@@ -173,13 +173,13 @@
             border-radius: 2px;
         }
 	.blank {
-	   display: none;
-	   position: relative;
-	   transform: scale(0);
-	   width: 100%;
-	   height: 100%;
-	   background: white;
-	   transition: transform 1s ease-in-out 0s;
+	  display: none;
+	  position: fixed;
+	  transform: scale(1);
+	  width: 100vw;
+	  height: 100vh;
+	  background: white;
+	  transition: transform 1s ease-in-out 0s;
 	}
         
         
@@ -328,8 +328,8 @@ openDivT1.style.position = "absolute"; // Set position to absolute
 // Animate the div to its final position and size
 openDivT1.style.transition = "transform 1s ease-in-out";
 openDivT1.style.transform = "scale(1)"; // Scale to full size
-openDivT1.style.width = "50vh"; // Set final width
-openDivT1.style.height = "50%"; // Set final height
+openDivT1.style.width = "100vw"; // Set final width
+openDivT1.style.height = "100vh"; // Set final height
 
 }
     </script>
