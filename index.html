@@ -160,6 +160,12 @@
 	  width: 480;
 	  height: 530;
         }
+	.hex-hide:nth-child(15) {
+	  display: none;
+	  position: relative;
+	  width: 480;
+	  height: 530;
+        }	
 
         .hex-text {
             position: absolute;
@@ -195,7 +201,7 @@
 <section class="hexagon-gallery">
       <div class="hex" style="background-color: #fff;"><a class="heximg" href="index.html"><div class="hex-text"></div><img class="heximg" src="1.png" alt="some" style="object-fit: scale-down;"></a></div>
       <div class="hex"><a class="heximg" href="default.asp"><div class="hex-text"></div><img class="heximg" src="2.png" alt="some"></a></div>
-      <div class="hex"><a class="heximg" href="whitepaper.html"><div class="hex-text">Whitepaper</div><img class="heximg" src="CONTRACTPPRW.jpg" alt="some"></a></div>
+      <div onclick="showDivW()" class="hex"><a class="heximg" href="#"><div class="hex-text">Whitepaper</div><img class="heximg" src="CONTRACTPPRW.jpg" alt="some"></a></div>
       <div class="hex"><a class="heximg" href="default.asp"><div class="hex-text"></div><img class="heximg" src="empty.webp"></a></div>
       <div class="hex"><a class="heximg" href="presale.asp"><div class="hex-text">Pre-sale Token</div><img class="heximg" src="COINCHAINSTREAM.jpg" alt="some"></a></div>
       <div class="hex"><a class="heximg" href="default.asp"><div class="hex-text"></div><img class="heximg" src="6.png" alt="some"></a></div>
@@ -227,6 +233,18 @@
 	      <div id="openDivTech" onclick="closeDivTech()" class="hex-hide">
 	       <a class="heximg">
 		      <button onclick="closeDivTech()" style="position: absolute;background: white;top: 23%;left: 91%;border: 1px solid black; color: black; border-radius: 10px; box-shadow: 1px 1px 5px 1px black;">X</button>
+		      	
+		        <img class="heximg" src="PPRW.jpg">
+	      	 </a>
+      		</div>
+      </div>
+      <div >
+	      <div class="blank" id="openDivW1">
+		EL DIV BLANCO
+		</div>
+	      <div id="openDivW" onclick="closeDivW()" class="hex-hide">
+	       <a class="heximg">
+		      <button onclick="closeDivW()" style="position: absolute;background: white;top: 23%;left: 91%;border: 1px solid black; color: black; border-radius: 10px; box-shadow: 1px 1px 5px 1px black;">X</button>
 		      	
 		        <img class="heximg" src="PPRW.jpg">
 	      	 </a>
@@ -338,6 +356,66 @@ function showDivTech() {
 
 
 }
+function showDivW() {
+  var openDivW = document.getElementById("openDivW");
+  var openDivW1 = document.getElementById("openDivW1");
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+
+  // Set the transition property
+  openDivW.style.transition = "transform 1s ease-in-out";
+
+  // Check if the transform property is already set to scale(0)
+  if (!openDivW.style.transform.startsWith("scale(0)")) {
+    openDivW.style.transform = "scale(0)";
+  }
+
+  // Reset the position of the div
+
+  openDivW.style.display = "block";
+  openDivW.style.position = "absolute";
+  openDivW.style.width = "38vh";
+  openDivW.style.height = "38%";
+
+  // Calculate the position of the div
+  var top = height / 2 - openDivW.clientHeight / 2;
+  var left = width / 2 - openDivW.clientWidth / 2;
+
+  // Set the position of the div
+  openDivW.style.top = 0;
+  openDivW.style.left = 0;
+
+  // Show the login form
+  openDivW.style.transform = "scale(1)";
+
+// Set the transition property
+  openDivW1.style.transition = "transform 1s ease-in-out";
+
+  // Check if the transform property is already set to scale(0)
+  if (!openDivW1.style.transform.startsWith("scale(0)")) {
+    openDivW1.style.transform = "scale(0)";
+  }
+
+  // Reset the position of the div
+
+  openDivW1.style.display = "block";
+  openDivW1.style.position = "absolute";
+  openDivW1.style.width = "100vw";
+  openDivW1.style.height = "100vh";
+
+  // Calculate the position of the div
+  var top = height / 2 - openDivW1.clientHeight / 2;
+  var left = width / 2 - openDivW1.clientWidth / 2;
+
+  // Set the position of the div
+  openDivW1.style.top = 0;
+  openDivW1.style.left = 0;
+
+  // Show the login form
+  openDivW1.style.transform = "scale(1)";
+
+
+}
     </script>
 <script>
 function closeDiv() {
@@ -355,6 +433,20 @@ function closeDivTech() {
   // Make the divs visible
   openDivT.style.transform = "scale(0)";
   openDivT1.style.transform = "scale(0)";
+
+
+  }
+function closeDivW() {
+  var openDivT = document.getElementById("openDivW");
+  var openDivT1 = document.getElementById("openDivW1");
+
+  // Set the transition property for animation
+  openDivW.style.transition = "transform 1s ease-in-out";
+  openDivW1.style.transition = "transform 1s ease-in-out";
+
+  // Make the divs visible
+  openDivW.style.transform = "scale(0)";
+  openDivW1.style.transform = "scale(0)";
 
 
   }
